@@ -6,7 +6,7 @@ For more details on background and project implementation, see the `docs` folder
 
 - Youtube Link: https://youtu.be/4Cs3y9Rn3KU
 
-<i>Note: This project is migrated from code.harvard.edu </i>
+<i>Note: This project is migrated from code.harvard.edu - a Harvard-owned version of GitHub where all contributors originally worked on. </i>
 
 ## Software Organization
 ```
