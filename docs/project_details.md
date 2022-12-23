@@ -177,11 +177,6 @@ AD27/
         ├── trig.py        
 |
 ├── docs
-│   ├── graph_example.md
-│   ├── milestone1.md
-│   ├── milestone2.md
-│   └── milestone2_progress.md
-│   └── milestone3.md
 |
 ├── tests/
 │   ├── __init__.py
