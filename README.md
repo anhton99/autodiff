@@ -6,6 +6,8 @@ For more details on background and project implementation, see the `docs` folder
 
 - Youtube Link: https://youtu.be/4Cs3y9Rn3KU
 
+<i>Note: This project is migrated from code.harvard.edu </i>
+
 ## Software Organization
 ```
 AD27/
