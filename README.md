@@ -6,6 +6,59 @@ Contributors: Anqi Chen, Emma Ton, Walt Williams, Wenyun Wang, Zhang Wu
 
 Video link: https://youtu.be/4Cs3y9Rn3KU 
 
+## Software Organization
+```
+AD27/
+├── __init__.py
+|
+└── autodiff/
+    ── __init__.py
+        ├── autoDiff.py
+        ├── dual.py
+        ├── reverse.py
+        ├── trig.py        
+|
+├── docs
+│   ├── graph_example.md
+│   ├── milestone1.md
+│   ├── milestone2.md
+│   └── milestone2_progress.md
+│   └── milestone3.md
+|
+├── tests/
+│   ├── __init__.py
+│   └── test_autoDiff.py
+│   └── test_dual.py
+│   └── test_reverse.py
+│   └── test_trig.py
+|
+├── .DS_Store
+├── .gitignore
+├── LICENSE
+├── README.md  
+├── check_coverage.py    
+├── requirements.txt     
+├── run_tests.sh
+├── pyproject.toml
+
+```
+- `autoDiff` module that defines both ForwardDiff and ReverseDiff class to compute the derivative of a function at a given point x and direction p or the Jacobian at a given point x with forward mode and reverse mode automatic differentiation, respectively. It will return a numpy array that represents the directional derivative or the Jacobian of the function that was passed to it. 
+
+- `dual` module that defines the Dual class which overloads basic and comparison operators of +, -, *, ^, /, negation, =, <, >, <=, >=, !=, etc for dual numbers.
+
+- `trig` module that overloads the basic trigonometric operators of sin, cos, tan, log, log10, log2, sinh, cosh, tanh, exp, sqrt, power, arcsin, arccos, arctan and etc for dual numbers as well as Node objects.
+
+- `reverse` module that defines the Node class which overloads basic and comparison operators of +, -, *, ^, /, negation, =, <, >, <=, >= for Node objects, calculates the corresponding value, forward pass and reverse pass (sensivity) of a node in a expression tree as well as prints the expression tree. 
+
+## Code Testing
+- We use CI to perform tests and the tests live in the tests folder. We also generate a code coverage report for the test suites.
+
+## How to Install Our Package
+
+Our package is released on PyPI. Therefore, you will be able to easily pip install our package with the following command:
+```bash
+$ python3 -m pip install AD27
+```
 ## How to Use Our Package
 
 You will first need to create a virtual environment based on the version of Python interpreter you are using.
@@ -138,61 +191,3 @@ $ ./demo.py
 ```python
 $ deactivate
 ```
-
-## Software Organization
-### Directory Structure
-```
-AD27/
-├── __init__.py
-|
-└── autodiff/
-    ── __init__.py
-        ├── autoDiff.py
-        ├── dual.py
-        ├── reverse.py
-        ├── trig.py        
-|
-├── docs
-│   ├── graph_example.md
-│   ├── milestone1.md
-│   ├── milestone2.md
-│   └── milestone2_progress.md
-│   └── milestone3.md
-|
-├── tests/
-│   ├── __init__.py
-│   └── test_autoDiff.py
-│   └── test_dual.py
-│   └── test_reverse.py
-│   └── test_trig.py
-|
-├── .DS_Store
-├── .gitignore
-├── LICENSE
-├── README.md  
-├── check_coverage.py    
-├── requirements.txt     
-├── run_tests.sh
-├── pyproject.toml
-
-```
-
-### Basic Modules and Their Functionalities
-- autoDiff module that defines both ForwardDiff and ReverseDiff class to compute the derivative of a function at a given point x and direction p or the Jacobian at a given point x with forward mode and reverse mode automatic differentiation, respectively. It will return a numpy array that represents the directional derivative or the Jacobian of the function that was passed to it. 
-
-- dual module that defines the Dual class which overloads basic and comparison operators of +, -, *, ^, /, negation, =, <, >, <=, >=, !=, etc for dual numbers.
-
-- trig module that overloads the basic trigonometric operators of sin, cos, tan, log, log10, log2, sinh, cosh, tanh, exp, sqrt, power, arcsin, arccos, arctan and etc for dual numbers as well as Node objects.
-
-- reverse module that defines the Node class which overloads basic and comparison operators of +, -, *, ^, /, negation, =, <, >, <=, >= for Node objects, calculates the corresponding value, forward pass and reverse pass (sensivity) of a node in a expression tree as well as prints the expression tree. The reverse module works by parsing an expression tree by exploiting opertor precedence built into python, which allows to build the tree automatically. The value, forward pass and reverse pass (sensivity) of a node in the expression tree are calculated with recursion.
-
-### Code Testing
-- We use CI to perform tests and the tests live in the tests folder. We also generate a code coverage report for the test suites.
-
-### How to Install Our Package
-
-Our package is released on PyPI. Therefore, you will be able to easily pip install our package with the following command:
-```bash
-$ python3 -m pip install AD27
-```
-
