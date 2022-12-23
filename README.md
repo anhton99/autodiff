@@ -22,13 +22,7 @@ AD27/
         ├── reverse.py
         ├── trig.py        
 |
-├── docs
-│   ├── graph_example.md
-│   ├── milestone1.md
-│   ├── milestone2.md
-│   └── milestone2_progress.md
-│   └── milestone3.md
-|
+├── docs/
 ├── tests/
 │   ├── __init__.py
 │   └── test_autoDiff.py
@@ -36,7 +30,6 @@ AD27/
 │   └── test_reverse.py
 │   └── test_trig.py
 |
-├── .DS_Store
 ├── .gitignore
 ├── LICENSE
 ├── README.md  
