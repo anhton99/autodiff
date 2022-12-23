@@ -2,8 +2,9 @@
 AD27 is a library for Automatic Differentiation that provides users a simple and intuitive API for the automatic calculation and storage of derivatives.
 For more details on background and project implementation, see the `docs` folder. 
 
-Contributors: Anqi Chen, Emma Ton, Walt Williams, Wenyun Wang, Zhang Wu
-Youtube Link: https://youtu.be/4Cs3y9Rn3KU
+- Contributors: Anqi Chen, Emma Ton, Walt Williams, Wenyun Wang, Zhang Wu
+
+- Youtube Link: https://youtu.be/4Cs3y9Rn3KU
 
 ## Software Organization
 ```
